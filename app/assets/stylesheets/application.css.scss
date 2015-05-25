@@ -1,2 +1,37 @@
 @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap";
+
+html, body{
+  background: #2DAFDD;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #FFFFFF;
+}
+
+em {
+  color: orange;
+}
+
+p{
+  color: #FFFFFF;
+}
+
+a {
+  color: #FFFFFF;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:visited:hover{
+  color: orange;
+}
