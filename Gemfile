@@ -26,3 +26,4 @@ end
 
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'figaro', '1.1.1'
