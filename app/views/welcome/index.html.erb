@@ -1,2 +1,19 @@
-<h1>Welcome to Cruzzit</h1>
-<p>Happy Saturday!</p>
+<div id="home">
+  <h1>Welcome to Cruzzit</h1>
+  <p>Happy Saturday!</p>
+  <p align="center">
+    <%- if user_signed_in? %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-info :hover'  %>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-info :hover' %>
+    <% end %>
+    </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Solves world hunger</h2>
+    <p>Marfa drinking vinegar fixie banjo yr migas, farm-to-table occupy tilde messenger bag tousled +1 mlkshk. Locavore narwhal kitsch food truck cronut. Locavore forage trust fund Bushwick migas. Chambray lomo bespoke, American Apparel cronut aesthetic Austin 3 wolf moon 8-bit craft beer High Life umami. Post-ironic Neutra Etsy, four loko asymmetrical Godard fap church-key. Kickstarter selvage cardigan, gastropub narwhal shabby chic Thundercats pop-up brunch swag butcher yr cronut. Pug hella salvia art party, Schlitz Neutra keytar distillery authentic slow-carb vegan quinoa shabby chic roof party.</p>
+  </div>
+</div>

@@ -5,6 +5,9 @@
       <h3 class="media-heading">
         <%= link_to post.title, post %>
       </h3>
+      <small>
+        Submitted <%= time_ago_in_words(post.created_at) %><% if post.user %> by <%= post.user.name %><% end %>
+      </small>
     </div>
   </div>
 <% end %>
