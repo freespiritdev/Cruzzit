@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="media">
+      <% if @user.image? %>
+        <%= image_tag @user.image.url, class: 'pull-left' %>
+      <% end %>
+      <div class="media-body">
+        <h2 class="media-heading"><%= @user.name %></h2>
+        <small>
+          <%= pluralize(@user.posts.count, 'post') %>,
+          <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
+        </small>
+      </div>
+    </div>
+  </div>
+
+
+</br>
+
+
+    <div id="comments">
+      <%= render @user.comments %>
+    </div>
+ 

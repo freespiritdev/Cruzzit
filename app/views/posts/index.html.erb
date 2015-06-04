@@ -1,16 +1,2 @@
-<h1>All Posts</h1>
-<% if policy(Post.new).create? %>
-<%= link_to "New Post", new_post_path, class: 'btn btn-info' %>
-<% end %>
-<% @posts.each do |post| %>
-  <div class="media">
-    <div class="media-body">
-      <h3 class="media-heading">
-        <%= link_to post.title, post %>
-      </h3>
-      <small>
-        Submitted <%= time_ago_in_words(post.created_at) %><% if post.user %> by <%= post.user.name %><% end %>
-      </small>
-    </div>
-  </div>
-<% end %>
+<%= render @posts %>
+<%= will_paginate @posts %>
