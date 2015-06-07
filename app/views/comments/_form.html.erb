@@ -3,6 +3,6 @@
   <%= form_for [@post, @post.comments.build], remote: true do |f| %>
     <%= f.label :body %>
     <%= f.text_field :body %>
-    <%= f.submit %>
+    <%= f.submit "Post Comment", class: 'btn btn-purple'%>
   <% end %>
 <% end %>
