@@ -8,12 +8,17 @@ html, body{
   height: 100%;
 }
 
+
 h1, h2, h3, h4, h5, h6{
   color: #FFFFFF;
 }
 
+.jumbotron h1{
+    color: #FFFFFF;
+}
+
 em {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 p{
@@ -41,7 +46,7 @@ a:visited:hover{
 }
 
 .btn-white {
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .btn-white:hover {
