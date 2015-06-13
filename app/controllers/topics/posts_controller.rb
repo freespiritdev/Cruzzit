@@ -1,8 +1,8 @@
 class Topics::PostsController < ApplicationController
   def show
+    @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
     authorize @topic
-    @post = Post.find(params[:id])
     @comments = @post.comments
   end
 
@@ -25,6 +25,7 @@ class Topics::PostsController < ApplicationController
     authorize @post
 
     if @post.save
+      @post.create_vote
       flash[:notice] = "Post was saved."
       redirect_to [@topic, @post]
     else
@@ -62,7 +63,7 @@ class Topics::PostsController < ApplicationController
     end
   end
   
-  private
+
 
   def post_params
     params.require(:post).permit(:title, :body, :image)
