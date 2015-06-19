@@ -1,5 +1,5 @@
 class FavoriteMailer < ApplicationMailer
-  default from: "admin@cruzzit.com"
+  default from: "help@cruzzit.com"
 
   def new_comment(user, post, comment)
  
